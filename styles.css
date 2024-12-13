@@ -14,6 +14,7 @@
     --light-text-color: #F5F6F7;
     --app-bg-color: #F5F6F7;
     --pokemon-bg-color: #F0F1F7;
+    --shadow-color: #AEACB2;
 }
 
 .grass {
@@ -93,6 +94,7 @@ body {
     width: 450px;
     padding: 20px;
     margin-bottom: 25px;
+    box-shadow: 10px 10px var(--shadow-color);
 }
 
 .search-container {
@@ -133,13 +135,17 @@ body {
     min-height: 350px;
     display: flex;
     flex-direction: column;
-    /* gap: 80px; */
     justify-content: space-between;
 }
 
 .pokemon-size {
     font-size: 0.9rem;
     margin: 10px 0;
+}
+
+.pokemon-name {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .pokemon-img {
