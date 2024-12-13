@@ -52,7 +52,7 @@ const fetchData = async (url) => {
 
 searchButton.addEventListener('click', async e => {
     e.preventDefault();
-    inputValue = searchInput.value;
+    inputValue = searchInput.value.toLowerCase();
 
     searchInput.setCustomValidity('');
     if (!inputValue) { 
