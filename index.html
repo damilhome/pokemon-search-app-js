@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Search App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Pokémon Search App</h1>
+    </header>
+    <main class="app-container">
+        <form class="search-container">
+            <label for="search-input">Search for Pokémon Name or ID:</label>
+            <input type="text" id="search-input" class="search-input" required>
+            <button id="search-button" class="search-button" type="button">Search</button>
+        </form>
+        <section class="pokemon-container">
+            <div class="pokemon-info">
+                <p class="pokemon-name">
+                    <span id="pokemon-name">BULBASAUR </span>
+                    <span>&nbsp;</span>
+                    <span id="pokemon-id"> #1</span>
+                </p>
+                <p class="pokemon-size">
+                    Weight: <span id="weight">69</span> 
+                    Height: <span id="height">7</span>
+                </p>
+            </div>
+            <img id="pokemon-img" src="bulbsaur.png" alt="bulbasaur" class="pokemon-img">
+            <div id="types" class="types">
+                <p class="type grass">GRASS</p>
+                <p class="type poison">POISON</p>
+            </div>
+        </section>
+        <section class="stats-container">
+            <p class="info header">Base</p>
+            <p class="info header">Stats</p>
+            <p class="info">HP:</p>
+            <p id="hp" class="info">45</p>
+            <p class="info">Attack:</p>
+            <p id="attack" class="info">49</p>
+            <p class="info">Defense:</p>
+            <p id="defense" class="info">49</p>
+            <p class="info">Sp. Attack</p>
+            <p id="special-attack" class="info">65</p>
+            <p class="info">Sp. Defense:</p>
+            <p id="special-defense" class="info">65</p>
+            <p class="info">Speed</p>
+            <p id="speed" class="info">45</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
