@@ -148,9 +148,12 @@ body {
     font-weight: 600;
 }
 
+#sprite-container {
+    align-self: center;
+}
+
 .pokemon-img {
     width: 180px;
-    align-self: center;
 }
 
 .types {

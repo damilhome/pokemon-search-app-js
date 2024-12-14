@@ -5,6 +5,7 @@ const pokemonName = document.getElementById('pokemon-name');
 const pokemonId = document.getElementById('pokemon-id');
 const weight = document.getElementById('weight');
 const height = document.getElementById('height');
+const spriteContainer = document.getElementById('sprite-container');
 const pokemonImg = document.getElementById('pokemon-img');
 const types = document.getElementById('types');
 const hp = document.getElementById('hp');
@@ -28,8 +29,7 @@ const showPokemonInfo = data => {
     pokemonId.textContent = `#${data.id}`;
     weight.textContent = `Weight: ${data.weight}`;
     height.textContent = `Height: ${data.height}`;
-    pokemonImg.setAttribute('src', data.sprites.front_default)
-    pokemonImg.setAttribute('alt', `${data.name} image.`)
+    spriteContainer.innerHTML = `<img id="sprite" src="${data.sprites.front_default}" alt="${data.name} image" class="pokemon-img">`;
     updateTypes(data);
     hp.textContent = data.stats[0].base_stat;
     attack.textContent = data.stats[1].base_stat;
@@ -50,9 +50,16 @@ const fetchData = async (url) => {
     }
 };
 
+searchInput.addEventListener('keydown', e => {
+    if(e.key === 'Enter') {
+        e.preventDefault();
+        searchButton.click();
+    }
+});
+
 searchButton.addEventListener('click', async e => {
     e.preventDefault();
-    inputValue = searchInput.value.toLowerCase();
+    const inputValue = searchInput.value.toLowerCase();
 
     searchInput.setCustomValidity('');
     if (!inputValue) { 
@@ -68,5 +75,4 @@ searchButton.addEventListener('click', async e => {
     } else {
         showPokemonInfo(data)
     }
-
 })
