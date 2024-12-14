@@ -187,3 +187,13 @@ body {
 .header {
     font-weight: bold;
 }
+
+@media screen and (max-width: 550px) {
+    .app-container {
+        width: 325px;
+    }
+
+    .search-input {
+        width: 180px;
+    }
+}
